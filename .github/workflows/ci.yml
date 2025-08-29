@@ -31,7 +31,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t statusboard:ci ./app
+        docker build -t statusboard:ci .
 
     - name: Run Docker container (smoke test)
       run: |
