@@ -35,7 +35,7 @@ jobs:
 
     - name: Run Docker container (smoke test)
       run: |
-        docker run --rm -d -p 8000:8000 --name statusboard-ci statusboard:ci
+        docker run -d -p 8000:8000 --name statusboard-ci statusboard:ci
         sleep 5
         docker ps
         docker stop statusboard-ci
