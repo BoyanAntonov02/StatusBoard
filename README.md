@@ -6,6 +6,11 @@ This is an educational DevOps project built:
 - The project is completely free and runs locally (Minikube / Kind / K3s).
 ---
 
+## Static Page - Github
+## Web Service - Render
+https://boyanantonov02.github.io/StatusBoard/
+https://statusboard-tsxx.onrender.com
+
 ## How to Run the Project Locally
 You need:
 Make, Docker, Minikube, kubetcl
