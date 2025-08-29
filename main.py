@@ -2,8 +2,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import httpx
 
+app = FastAPI(title="StatusBoard")
+
 origins = [
-    "https://boyanantonov02.github.io/StatusBoard/",
+    "https://boyanantonov02.github.io",
     "http://localhost:8000",
 ]
 
@@ -14,8 +16,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-app = FastAPI(title="StatusBoard")
 
 sites = ["https://www.google.com", "https://www.facebook.com", "https://www.youtube.com"]
 
