@@ -7,8 +7,8 @@ This is an educational DevOps project built:
 ---
 
 ## Static Page - Github
-## Web Service - Render
 https://boyanantonov02.github.io/StatusBoard/
+## Web Service - Render
 https://statusboard-tsxx.onrender.com
 
 ## How to Run the Project Locally
