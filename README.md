@@ -1,5 +1,3 @@
-#Statusboard - DevOps Playground
-
 ## Project Goal
 This is an educational DevOps project built:
 - Python application, Docker containerization, Kubernetes deployment, CI/CD with GitHub Actions, IaC (Terraform, Ansible), GitOps (ArgoCD), Monitoring and logging (Prometheus, Grafana, Loki)
@@ -24,6 +22,8 @@ make restart
 
 # FYI
 make logs
-
 make clean
+
+#Checkout, Setup Python, Run tests, Docker Buildx, Push
+make ci
 ```

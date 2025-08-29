@@ -2,7 +2,24 @@ APP_NAME=statusboard
 IMAGE_NAME=$(APP_NAME):latest
 DEPLOYMENT=statusboard-deployment
 
-.PHONY: start build deploy restart logs clean
+.PHONY: ci
+
+ci:
+	@if command -v python3 &> /dev/null; then \
+		PYTHON=python3; \
+	elif command -v python &> /dev/null; then \
+		PYTHON=python; \
+	elif command -v py &> /dev/null; then \
+		PYTHON=py; \
+	else \
+		echo "Python not found!"; exit 1; \
+	fi; \
+	\
+	$$PYTHON -m pip install --upgrade pip; \
+	$$PYTHON -m pip install -r requirements.txt; \
+	\
+	$$PYTHON -m pytest -q; \
+	$$PYTHON -m flake8 app
 
 start:
 	minikube start || true
