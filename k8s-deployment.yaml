@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: statusboard-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: statusboard
+  template:
+    metadata:
+      labels:
+        app: statusboard
+    spec:
+      containers:
+      - name: statusboard
+        image: statusboard:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
