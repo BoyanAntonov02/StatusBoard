@@ -1,9 +1,22 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import httpx
+
+origins = [
+    "https://boyanantonov02.github.io",
+    "http://localhost:8000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app = FastAPI(title="StatusBoard")
 
-# Списък със сайтове, които ще следим
 sites = ["https://www.google.com", "https://www.facebook.com", "https://www.youtube.com"]
 
 @app.get("/")
