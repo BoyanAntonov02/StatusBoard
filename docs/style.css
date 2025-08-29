@@ -1,3 +1,25 @@
-body { font-family: Arial, sans-serif; padding: 2rem; }
-h1 { color: #2c3e50; }
-li { margin: 0.5rem 0; }
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+li {
+    background-color: #fff;
+    margin: 0.5rem auto;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}

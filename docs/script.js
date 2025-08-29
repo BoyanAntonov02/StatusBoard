@@ -1,16 +1,22 @@
+const STATUS_URL = "https://statusboard-tsxx.onrender.com/status";
+
 async function fetchStatus() {
+    const ul = document.getElementById("status-list");
+    ul.innerHTML = "";
+
     try {
-        const response = await fetch("https://statusboard-tsxx.onrender.com/status");
-        const data = await response.json();
-        const list = document.getElementById("status-list");
-        list.innerHTML = "";
+        const res = await fetch(STATUS_URL);
+        const data = await res.json();
+
         for (const [site, status] of Object.entries(data)) {
             const li = document.createElement("li");
             li.textContent = `${site}: ${status}`;
-            list.appendChild(li);
+            ul.appendChild(li);
         }
     } catch (err) {
-        console.error(err);
+        const li = document.createElement("li");
+        li.textContent = `Error fetching status: ${err}`;
+        ul.appendChild(li);
     }
 }
 
