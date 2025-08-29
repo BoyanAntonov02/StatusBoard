@@ -17,7 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-sites = ["https://www.google.com", "https://www.facebook.com", "https://www.youtube.com"]
+sites = ["https://www.google.com", "https://www.facebook.com", "https://www.youtube.com", "Pate Mnogo Te Obicham No nqmame sait zatova e offline"]
 
 @app.get("/")
 def read_root():
