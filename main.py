@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import httpx
 
 origins = [
-    "https://boyanantonov02.github.io",
+    "https://boyanantonov02.github.io/StatusBoard/",
     "http://localhost:8000",
 ]
 
